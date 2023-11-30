@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Time Picker View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="TimePickerViewController" customModule="App_ToDoList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hqk-d1-dcX">
+                                <rect key="frame" x="0.0" y="548" width="393" height="270"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZtO-QA-6DC">
+                                        <rect key="frame" x="16" y="16" width="110" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="110" id="YQr-cu-79a"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Cancelar">
+                                            <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="18"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="close:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="QCr-33-JhA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBv-dh-Vru">
+                                        <rect key="frame" x="327" y="16" width="50" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="beP-HL-hA3"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Ok">
+                                            <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="18"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="close:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="syG-jD-nL5"/>
+                                        </connections>
+                                    </button>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="e5y-hT-9Nl">
+                                        <rect key="frame" x="24" y="60" width="345" height="216"/>
+                                        <locale key="locale" localeIdentifier="pt_BR"/>
+                                    </datePicker>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="aBv-dh-Vru" secondAttribute="trailing" constant="16" id="1ES-n0-emz"/>
+                                    <constraint firstAttribute="trailing" secondItem="e5y-hT-9Nl" secondAttribute="trailing" constant="24" id="Dd0-Ue-wQ0"/>
+                                    <constraint firstItem="ZtO-QA-6DC" firstAttribute="top" secondItem="Hqk-d1-dcX" secondAttribute="top" constant="16" id="E38-jZ-YFV"/>
+                                    <constraint firstItem="ZtO-QA-6DC" firstAttribute="leading" secondItem="Hqk-d1-dcX" secondAttribute="leading" constant="16" id="ScG-Wy-oXi"/>
+                                    <constraint firstItem="aBv-dh-Vru" firstAttribute="top" secondItem="Hqk-d1-dcX" secondAttribute="top" constant="16" id="Xxs-qu-0jf"/>
+                                    <constraint firstAttribute="bottom" secondItem="e5y-hT-9Nl" secondAttribute="bottom" constant="-6" id="fd1-2D-vvB"/>
+                                    <constraint firstItem="e5y-hT-9Nl" firstAttribute="leading" secondItem="Hqk-d1-dcX" secondAttribute="leading" constant="24" id="frM-KL-nWa"/>
+                                    <constraint firstAttribute="height" constant="270" id="zoU-4D-0qa"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.33000000000000002" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Hqk-d1-dcX" secondAttribute="trailing" id="STO-ss-AQz"/>
+                            <constraint firstItem="Hqk-d1-dcX" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="irH-xX-UME"/>
+                            <constraint firstItem="Hqk-d1-dcX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="xnD-Jf-LXo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="ZtO-QA-6DC" id="1OH-Dn-TnU"/>
+                        <outlet property="okButton" destination="aBv-dh-Vru" id="rk4-pz-OVe"/>
+                        <outlet property="timeDatePicker" destination="e5y-hT-9Nl" id="1Wl-yo-Gt5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
